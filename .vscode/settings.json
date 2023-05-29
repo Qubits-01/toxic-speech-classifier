@@ -31,6 +31,7 @@
         "din",
         "dito",
         "doon",
+        "fastapi",
         "gagawin",
         "gayunman",
         "ginagawa",
@@ -42,6 +43,7 @@
         "hanggang",
         "hindi",
         "huwag",
+        "Hypertuning",
         "iba",
         "ibaba",
         "ibabaw",
@@ -146,6 +148,7 @@
         "proba",
         "pumunta",
         "pumupunta",
+        "pydantic",
         "pyplot",
         "sa",
         "saan",
@@ -170,5 +173,9 @@
         "xticklabels",
         "ylabel",
         "yticklabels"
-    ]
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
 }

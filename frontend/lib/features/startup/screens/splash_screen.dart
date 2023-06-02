@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../core/features/auth/presentation/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
-  static const routeName = '/';
-
   const SplashScreen({super.key});
+
+  static const routeName = '/';
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(
+      const Duration(seconds: 2),
+      () => GoRouter.of(context).go(LoginScreen.routeName),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

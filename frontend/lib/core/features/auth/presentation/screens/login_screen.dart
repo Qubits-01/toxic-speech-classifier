@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:toxic_speech_classifier/core/features/auth/presentation/screens/forgot_password_screen.dart';
+import 'package:toxic_speech_classifier/core/features/auth/presentation/screens/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -158,6 +159,9 @@ class LoginScreen extends StatelessWidget {
                             color: Theme.of(context).colorScheme.inversePrimary,
                           ),
                     ),
+                    onTap: () {
+                      GoRouter.of(context).push(SignUpScreen.routeName);
+                    },
                   ),
                 ],
               ),

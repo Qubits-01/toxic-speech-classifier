@@ -4,7 +4,6 @@ from fastapi import FastAPI
 
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 
 import joblib
 
@@ -355,10 +354,10 @@ def is_text_toxic(text: Union[str, None] = None):
     probability = mnb_model.predict_proba(X_dtm)
 
     print("\n")
-    print("[ text ]:", text)
-    print("[ isToxic ]:", bool(prediction))
-    print("[ non_toxic_probability ]:", probability[0][0])
-    print("[ toxic_probability ]:", probability[0][1])
+    print("[text]:", text)
+    print("[isToxic]:", bool(prediction))
+    print("[non_toxic_prob]:", probability[0][0])
+    print("[toxic_prob]:", probability[0][1])
     print("\n")
 
     return {

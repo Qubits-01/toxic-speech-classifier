@@ -1,10 +1,11 @@
 import 'package:go_router/go_router.dart';
-import '../features/item_showcase/presentation/screens/item_details_screen.dart';
 
 import '../core/features/app_settings/presentation/screens/app_settings_screen.dart';
 import '../core/features/auth/presentation/screens/forgot_password_screen.dart';
 import '../core/features/auth/presentation/screens/login_screen.dart';
 import '../core/features/auth/presentation/screens/sign_up_screen.dart';
+import '../features/item_showcase/presentation/screens/item_details_screen.dart';
+import '../features/ratings_and_reviews/presentation/ratings_and_reviews_screen.dart';
 import '../features/startup/screens/splash_screen.dart';
 
 class AppRouter {
@@ -31,6 +32,10 @@ class AppRouter {
       GoRoute(
         path: ItemDetailsScreen.routeName,
         builder: (_, __) => const ItemDetailsScreen(),
+      ),
+      GoRoute(
+        path: RatingsAndReviewsScreen.routeName,
+        builder: (_, __) => RatingsAndReviewsScreen(),
       ),
       GoRoute(
         path: AppSettingsScreen.routeName,

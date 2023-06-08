@@ -1,4 +1,3 @@
-import 'package:appwrite/appwrite.dart';
 import 'package:flutter/material.dart';
 
 import 'router/app_router.dart';

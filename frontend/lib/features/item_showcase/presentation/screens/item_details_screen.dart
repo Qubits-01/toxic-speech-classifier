@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../ratings_and_reviews/presentation/ratings_and_reviews_screen.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   const ItemDetailsScreen({super.key});
 
   static const routeName = '/item-details';
 
-  final image1_name = 'dark_themed_food_1.jpg';
-  final image2_name = 'dark_themed_food_2.jpg';
-  final image3_name = 'dark_themed_food_3.jpg';
-  final item_description =
+  final imageName1 = 'dark_themed_food_1.jpg';
+  final imageName2 = 'dark_themed_food_2.jpg';
+  final imageName3 = 'dark_themed_food_3.jpg';
+  final itemDescription =
       'A tantalizing fusion of flavors that will take your taste buds on an epic adventure through the shadows of culinary genius. Imagine a mischievous dance between rich dark chocolate, velvety caramel, and a subtle hint of mischief.';
 
   @override
@@ -51,15 +54,15 @@ class ItemDetailsScreen extends StatelessWidget {
               autoPlayInterval: 5000,
               children: <Widget>[
                 Image.asset(
-                  'assets/$image1_name',
+                  'assets/$imageName1',
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  'assets/$image2_name',
+                  'assets/$imageName2',
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  'assets/$image3_name',
+                  'assets/$imageName3',
                   fit: BoxFit.cover,
                 ),
               ],
@@ -81,7 +84,7 @@ class ItemDetailsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10.0),
 
-                  // Rating bar.
+                  // Rating bar and button to Ratings and Reviews screen.
                   Row(
                     children: <Widget>[
                       RatingBar(
@@ -109,13 +112,18 @@ class ItemDetailsScreen extends StatelessWidget {
                         ),
                         onRatingUpdate: (double rating) {},
                       ),
+
+                      // Ratings and Reviews button.
                       IconButton(
                         icon: const Icon(
                           Icons.arrow_forward_ios_rounded,
                           size: 15.0,
                         ),
                         visualDensity: const VisualDensity(horizontal: -4),
-                        onPressed: () {},
+                        onPressed: () {
+                          GoRouter.of(context)
+                              .push(RatingsAndReviewsScreen.routeName);
+                        },
                       ),
                     ],
                   ),
@@ -123,7 +131,7 @@ class ItemDetailsScreen extends StatelessWidget {
 
                   // Item description.
                   Text(
-                    item_description,
+                    itemDescription,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(height: 20.0),

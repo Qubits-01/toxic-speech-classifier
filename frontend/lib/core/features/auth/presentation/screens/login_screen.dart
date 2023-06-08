@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:toxic_speech_classifier/features/item_showcase/presentation/screens/item_details_screen.dart';
 
 import 'forgot_password_screen.dart';
 import 'sign_up_screen.dart';
@@ -142,7 +143,9 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 width: displaySize.width,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(ItemDetailsScreen.routeName);
+                  },
                   child: const Text('Login'),
                 ),
               ),

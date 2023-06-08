@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import '../features/item_showcase/presentation/screens/item_details_screen.dart';
 
 import '../core/features/app_settings/presentation/screens/app_settings_screen.dart';
 import '../core/features/auth/presentation/screens/forgot_password_screen.dart';
@@ -24,8 +25,13 @@ class AppRouter {
         builder: (_, __) => const SignUpScreen(),
       ),
       GoRoute(
-          path: ForgotPasswordScreen.routeName,
-          builder: (_, __) => const ForgotPasswordScreen()),
+        path: ForgotPasswordScreen.routeName,
+        builder: (_, __) => const ForgotPasswordScreen(),
+      ),
+      GoRoute(
+        path: ItemDetailsScreen.routeName,
+        builder: (_, __) => const ItemDetailsScreen(),
+      ),
       GoRoute(
         path: AppSettingsScreen.routeName,
         builder: (_, __) => const AppSettingsScreen(),

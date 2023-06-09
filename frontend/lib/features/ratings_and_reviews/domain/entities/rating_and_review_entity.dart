@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class RatingsAndReviewsEntity extends Equatable {
-  const RatingsAndReviewsEntity({
+class RatingAndReviewEntity extends Equatable {
+  const RatingAndReviewEntity({
     required this.ratingsAndReviewsId,
     required this.username,
     required this.rating,

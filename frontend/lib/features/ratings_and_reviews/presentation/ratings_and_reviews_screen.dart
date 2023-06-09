@@ -190,6 +190,7 @@ class RatingAndReviewCard extends StatelessWidget {
                   IconButton(
                     onPressed: () {},
                     iconSize: 15.0,
+                    visualDensity: const VisualDensity(horizontal: -4),
                     icon: const FaIcon(
                       FontAwesomeIcons.ellipsisVertical,
                     ),
